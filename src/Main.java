@@ -14,11 +14,13 @@ public class Main {
         kykyld(30);
         kykyld(80);
     }
-public static void kykyld (int distance ){
+
+    public static void kykyld(int distance) {
         int days = computeDelivertDeys(distance);
 
-        System.out.println(String.format(  " потребуется дней: %s ", days ));
-}
+        System.out.println(String.format(" потребуется дней: %s ", days));
+    }
+
     public static int computeDelivertDeys(int distance) {
         int days;
         {
@@ -38,35 +40,29 @@ public static void kykyld (int distance ){
     }
 
 
-
-
-
-
-
-
-
     private static void task2() {
         System.out.println(" Задача 2 ");
-        solutionMethod(2017, 0 );
+        solutionMethod(2017, 0);
         solutionMethod(2014, 1);
 
 
     }
-        private static void solutionMethod ( int currentYear, int clientOs){
+
+    private static void solutionMethod(int currentYear, int clientOs) {
         int YearOfIssue = 2015;
 
 
-            String LighInfo;
+        String LighInfo;
 
         if (currentYear < YearOfIssue) {
-            LighInfo = " облекченую " ;
-        }else {
-            LighInfo= "";
+            LighInfo = " облекченую ";
+        } else {
+            LighInfo = "";
         }
-         String osType;
-        if (clientOs ==0 ) {
+        String osType;
+        if (clientOs == 0) {
             osType = "IOS";
-        }else{
+        } else {
             osType = "Android ";
         }
         String generalInfo = " Устоновите " + LighInfo + " Версию приложения для " + osType + " по ссылке ";
@@ -75,13 +71,14 @@ public static void kykyld (int distance ){
     }
 
     private static void task1() {
-        System.out.println( "задача 1 ");
+        System.out.println("задача 1 ");
         checkYearLeap(2003);
         checkYearLeap(2008);
         checkYearLeap(2021);
 
 
     }
+
     private static void checkYearLeap(int year) {
         if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
             System.out.println(year + " - высокосный год ");
@@ -90,4 +87,5 @@ public static void kykyld (int distance ){
 
 
         }
-    }}
+    }
+}
